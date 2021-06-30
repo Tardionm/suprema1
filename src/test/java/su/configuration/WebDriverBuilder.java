@@ -4,12 +4,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class WebDriverBuilder {
 
     WebDriver driver;
     boolean maximize = true;
 
     public static WebDriverBuilder of(DriveName driveName) {
+        System.setProperty("webdriver.gecko.driver", "C:/Users/Sergey/Desktop/geckodriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:/Users/MSW/Desktop/chromedriver.exe");
         WebDriverBuilder webDriverBuilder = new WebDriverBuilder();
         webDriverBuilder.driver = driveName.getWebDriver();
         return webDriverBuilder;
@@ -23,6 +27,7 @@ public class WebDriverBuilder {
     public WebDriver build() {
         if (maximize)
             driver.manage().window().maximize();
+         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); // добавил сам , не было в оригинале
         return driver;
     }
 /*

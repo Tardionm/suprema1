@@ -6,7 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="suprema1" />
         <module name="suprema_authorization" />
+        <module name="suprema" />
       </profile>
     </annotationProcessing>
   </component>
