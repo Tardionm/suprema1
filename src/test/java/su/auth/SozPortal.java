@@ -136,7 +136,7 @@ public class SozPortal {
 
         WebElement element =  driver.findElement(By.xpath("/html/body/" +
                 "div/div/div/main/section/section[1]/div[3]/div[2]/div[1]/svg"));
-
+//
 
       /*      WebDriverWait wait = new WebDriverWait(driver, 10);
             wait.until(ExpectedConditions.elementTo(element));
